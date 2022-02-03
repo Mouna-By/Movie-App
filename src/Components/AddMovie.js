@@ -13,14 +13,15 @@ function AddMovie({add}){
     handleClose();
     let newMovie={title,description,posterUrl,rate};
     add(newMovie);
-
     }
+
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
     return (
     <div>
-            <Button variant="primary" onClick={handleShow}>
-            ADD Movie
+        <Button style={{marginBottom:'30px'}} variant="primary" onClick={handleShow}>
+        Add New Movie
         </Button>
 
         <Modal show={show} onHide={handleClose}>
@@ -48,7 +49,7 @@ function AddMovie({add}){
                 Close
             </Button>
             <Button variant="primary" onClick={()=>handleAdd()}>
-                ADD
+                Add
             </Button>
             </Modal.Footer>
         </Modal>

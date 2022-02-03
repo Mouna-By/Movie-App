@@ -8,7 +8,7 @@ function FilterByRate({rating,isRating, rate, setRate}) {
             <Rate disabled value={rating}/>
             </div>:
             <div>
-                <Rate tooltips={desc} value={rate} 
+                <Rate style={{marginLeft:'850px', backgroundColor:"#2874A6", width:"200px"}} tooltips={desc} value={rate} 
                 on onChange={(e)=>setRate(e)}/></div>}
     </div>
     );

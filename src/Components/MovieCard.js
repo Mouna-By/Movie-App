@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card } from "react-bootstrap"
+import { Card, Button } from "react-bootstrap"
 import { Rate } from 'antd';
+import { useNavigate } from 'react-router-dom';
 function MovieCard({ movies }) {
+    const navigate=useNavigate();
     return ( 
     <div>
         <Card style={{ width: '18rem' }}>
@@ -11,6 +13,7 @@ function MovieCard({ movies }) {
         <Card.Text>{movies.description}</Card.Text>
         <Rate disabled defaultValue={movies.rate} />
         <Card.Text><a href={movies.trailer} target={"blanck"}>{movies.trailer}</a></Card.Text>
+        <Button onClick={()=>navigate(`/${movies.id}`)}>Movie Description</Button>
 
     </Card.Body>
 </Card>
